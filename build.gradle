@@ -14,7 +14,6 @@ buildscript {
 }
 
 
-
 project.ext {
     springVersion = "4.3.14.RELEASE"
     springBootVersion = "1.5.10.RELEASE"
@@ -29,10 +28,10 @@ project.ext {
     projectMajorVersion = "6"
     projectMinorVersion = "1"
     projectPatchVersion = "10-tw"
-    //releaseType = "RELEASE"
+    releaseType = "RELEASE"
 //    releaseType = "M2"
 //    releaseType = "RC2"
-    releaseType = "BUILD-SNAPSHOT"
+//    releaseType = "BUILD-SNAPSHOT"
 
     // overall project version
     projectVersion = "${projectMajorVersion}.${projectMinorVersion}.${projectPatchVersion}"
