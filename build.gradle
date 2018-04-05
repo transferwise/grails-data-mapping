@@ -28,7 +28,7 @@ project.ext {
 
     projectMajorVersion = "6"
     projectMinorVersion = "1"
-    projectPatchVersion = "10"
+    projectPatchVersion = "10-tw"
     //releaseType = "RELEASE"
 //    releaseType = "M2"
 //    releaseType = "RC2"
@@ -339,16 +339,16 @@ subprojects {
             repositories {
                 maven {
                     credentials {
-                        def u = System.getenv("ARTIFACTORY_USERNAME") ?: project.hasProperty("artifactoryPublishUsername") ? project.artifactoryPublishUsername : ''
+                        def u = System.getenv("ARTIFACTORY_USER") ?: project.hasProperty("artifactoryPublishUsername") ? project.artifactoryPublishUsername : ''
                         def p = System.getenv("ARTIFACTORY_PASSWORD") ?: project.hasProperty("artifactoryPublishPassword") ? project.artifactoryPublishPassword : ''
                         username = u
                         password = p
                     }
                     if(isBuildSnapshot) {
-                        url  "https://repo.grails.org/grails/libs-snapshots-local"
+                        url  "http://artifacts.transferwise.com/artifactory/ext-snapshot-local"
                     }
                     else {
-                        url  "https://repo.grails.org/grails/libs-releases-local"
+                        url  "http://artifacts.transferwise.com/artifactory/ext-release-local"
                     }
 
                 }
